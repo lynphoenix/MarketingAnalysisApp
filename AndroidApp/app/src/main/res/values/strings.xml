@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">营销分析</string>
+    <string name="upload_file">上传文件</string>
+    <string name="voice_query">语音提问</string>
+    <string name="analyzing">正在分析...</string>
+    <string name="analysis_complete">分析完成</string>
+    <string name="error">错误</string>
+</resources>

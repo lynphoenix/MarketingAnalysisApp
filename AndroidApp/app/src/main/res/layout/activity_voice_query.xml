@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background">
+
+    <!-- 标题 -->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎤 语音提问"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 问题卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:contentPadding="16dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你的问题:"
+                android:textSize="12sp"
+                android:textColor="@color/secondary"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/questionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点击麦克风开始提问"
+                android:textSize="16sp"
+                android:textColor="@color/text"
+                android:minHeight="60dp"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 麦克风按钮 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/micButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:tint="@android:color/white"
+        app:fabSize="normal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 提交按钮 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交问题"
+        android:textSize="16sp"
+        app:cornerRadius="12dp"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 进度指示器 -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 回答卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:contentPadding="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI 回答:"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/answerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="等待你的提问..."
+                    android:textSize="15sp"
+                    android:textColor="@color/text"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

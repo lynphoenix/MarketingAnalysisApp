@@ -7,7 +7,7 @@ class APIService {
 
     // ⚠️ 重要：请将这个 URL 改成您的后端服务器地址
     // 示例：https://your-server.com 或 http://192.168.1.100:5000
-    private let baseURL = "YOUR_BACKEND_SERVER_URL"
+    private let baseURL = "http://47.99.75.219:5000"
 
     private init() {}
 
